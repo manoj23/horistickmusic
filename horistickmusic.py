@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 __copyright__ = "© 2014 Georges Savoundararadj"
-__license__   = "BSD"
+__license__   = "MIT"
 __version__   = "1.0"
 
 import functools
@@ -85,7 +85,7 @@ class HoriStickSampler(object):
         self.logger.info("Cool! You can play with your Joystick (only one is selected)!")
 
 
-       # TODO: get_id, get_name, get_numaxes, get_numballs, get_numbuttons, get_numhat
+        # TODO: get_id, get_name, get_numaxes, get_numballs, get_numbuttons, get_numhat
         self.hatState = (0, 0)
 
         # Event stuff
