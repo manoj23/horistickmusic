@@ -99,6 +99,16 @@ class HoriStickSampler(object):
         if not os.path.exists(folder):
             os.mkdir(folder)
 
+        # The hat can take 9 positions:
+        # (-1, 1) (0,  1) (1, 1)
+        # (-1, 0) (0,  0) (1, 0)
+        # (-1, 1) (0, -1) (1,-1)
+        # For each position of the hat (x,y) there is a set of possible sounds.
+        # The buttons are mapped as follow:
+        #  0 3 5 4
+        # 1 2 7 6
+        # For instance, if the hat is in the top left position  (-1, 1) and the button 6 (bottom right) is pressed,
+        # a piano sound is played.
         self.soundMap = {
                      ( -1, -1): { 0: squad(200, 0.5, 4), 1: squad(100, 0.5, 4), 2: squad(300, 0.5, 4), 3: squad(400, 0.5, 4), 
                                   4: squad(800, 0.5, 4), 5: squad(600, 0.5, 4), 6: squad(700, 0.5, 4), 7: squad(500, 0.5, 4)},
